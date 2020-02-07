@@ -16,6 +16,8 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
   <link rel="stylesheet" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-minimal.min.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script>
 
 
 <script id="hexo-configurations">
@@ -35,9 +37,9 @@
     lazyload: false,
     pangu: false,
     algolia: {
-      appID: '',
+      appID: '3TK0EE8ROU',
       apiKey: '',
-      indexName: '',
+      indexName: 'hexo-notes',
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
@@ -83,6 +85,15 @@
   
 
 
+  <script>
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?a7b264367b7dcd3d93a52bff0f6a83e1";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
 
 
 
@@ -153,14 +164,45 @@
     <a href="/tags/" rel="section"><i class="fa fa-fw fa-tags"></i>标签</a>
 
   </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-fw fa-th"></i>分类</a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-fw fa-archive"></i>归档</a>
 
   </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
   </ul>
 
 </nav>
+  <div class="site-search">
+    <div class="popup search-popup">
+    <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input" id="search-input"></div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="algolia-results">
+  <div id="algolia-stats"></div>
+  <div id="algolia-hits"></div>
+  <div id="algolia-pagination" class="algolia-pagination"></div>
+</div>
+
+  
+</div>
+<div class="search-pop-overlay"></div>
+
+  </div>
 </div>
     </header>
 
@@ -187,9 +229,9 @@
     <link itemprop="mainEntityOfPage" href="http://jayzone.cn/2019/12/22/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://user-gold-cdn.xitu.io/2019/10/28/16e10fe67c47f16c?imageView2/1/w/200/h/200/q/85/format/webp/interlace/1">
+      <meta itemprop="image" content="/images/avatar.gif">
       <meta itemprop="name" content="Jay Liu">
-      <meta itemprop="description" content="记录个人生活，学习经历">
+      <meta itemprop="description" content="Jay's personal page">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
@@ -312,9 +354,9 @@
       <div class="site-overview-wrap sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
     <img class="site-author-image" itemprop="image" alt="Jay Liu"
-      src="https://user-gold-cdn.xitu.io/2019/10/28/16e10fe67c47f16c?imageView2/1/w/200/h/200/q/85/format/webp/interlace/1">
+      src="/images/avatar.gif">
   <p class="site-author-name" itemprop="name">Jay Liu</p>
-  <div class="site-description" itemprop="description">记录个人生活，学习经历</div>
+  <div class="site-description" itemprop="description">Jay's personal page</div>
 </div>
 <div class="site-state-wrap motion-element">
   <nav class="site-state">
@@ -325,8 +367,28 @@
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
   </nav>
 </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/fe-jay" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;fe-jay" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://www.zhihu.com/people/liujie-88-60" title="知乎 → https:&#x2F;&#x2F;www.zhihu.com&#x2F;people&#x2F;liujie-88-60" rel="noopener" target="_blank"><i class="fa fa-fw fa-send-o"></i>知乎</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:liujie_2288@qq.com" title="E-Mail → mailto:liujie_2288@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://juejin.im/user/5943711761ff4b006cd45cc3" title="掘金 → https:&#x2F;&#x2F;juejin.im&#x2F;user&#x2F;5943711761ff4b006cd45cc3" rel="noopener" target="_blank"><i class="fa fa-fw fa-anchor"></i>掘金</a>
+      </span>
+  </div>
 
 
 
@@ -349,7 +411,7 @@
   &copy; 
   <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
-    <i class="fa fa-user"></i>
+    <i class="fa fa-heart"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Jay Liu</span>
     <span class="post-meta-divider">|</span>
@@ -384,6 +446,8 @@
   </div>
 
   
+  
+  <script color='0,0,255' opacity='0.5' zIndex='-1' count='99' src="//cdn.jsdelivr.net/gh/theme-next/theme-next-canvas-nest@1/canvas-nest.min.js"></script>
   <script src="/lib/anime.min.js"></script>
   <script src="//cdn.jsdelivr.net/npm/jquery@3/dist/jquery.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/fancyapps/fancybox@3/dist/jquery.fancybox.min.js"></script>
@@ -414,6 +478,13 @@
     })();
   </script>
 
+
+
+
+  
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/instantsearch.js@2/dist/instantsearch.min.css">
+<script src="//cdn.jsdelivr.net/npm/instantsearch.js@2/dist/instantsearch.min.js"></script>
+<script src="/js/algolia-search.js"></script>
 
 
 

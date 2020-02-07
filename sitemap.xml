@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://jayzone.cn/404.html</loc>
+    <loc>http://jayzone.cn/tags/index.html</loc>
     
-    <lastmod>2020-02-05T03:51:23.265Z</lastmod>
+    <lastmod>2020-02-07T04:45:05.081Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://jayzone.cn/2020/02/04/test/</loc>
     
-    <lastmod>2020-02-04T15:20:07.729Z</lastmod>
+    <lastmod>2020-02-07T04:44:17.981Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jayzone.cn/categories/index.html</loc>
+    
+    <lastmod>2020-02-07T03:49:38.890Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://jayzone.cn/404.html</loc>
+    
+    <lastmod>2020-02-07T03:48:37.245Z</lastmod>
     
   </url>
   
